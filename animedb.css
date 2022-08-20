@@ -1,0 +1,15 @@
+.ui-tooltips-guide .ui-tooltips-cnt{
+    background-color: rgba(255, 255, 255, 0.95);
+}
+.ui-tooltips-cnt{
+    line-height: 46px;
+    height: 46px;
+    padding-left: 12px;
+    padding-right: 32px;
+    background-color: #fff;
+    color: #000;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
