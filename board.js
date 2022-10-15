@@ -18,7 +18,7 @@ function alertNotice(data, last_notice) {
         //alert("我们有新的公告！\n公告时间：" + data[last_notice].time + "\n公告内容：" + data[last_notice].content + "\n如需查看其他公告请展开首页的公告栏~");
         Swal.fire({
             title: "新公告！",
-            html: "<span style=\"color: red; font-weight: bold;\">本站QQ群(当然是首位)：<a href=\"https://jq.qq.com/?_wv=1027&amp;k=G9DJBTKA\">659950593</a>  欢迎加入！！！</span><br>"+"公告时间：" + data[last_notice].time + "<br>公告内容：" + data[last_notice].content + "<br>如需查看其他公告请展开首页的公告栏~",
+            html: "<span style=\"color: red; font-weight: bold;\">本站QQ群(当然是首位)：<a href=\"https://jq.qq.com/?_wv=1027&amp;k=G9DJBTKA\">659950593</a>  欢迎加入！！！</span><br>"+"公告时间：" + data[last_notice].time + "<br>公告内容：<span style='color: dodgerblue;font-weight: bold;'>" + data[last_notice].content + "</span><br>如需查看其他公告请展开首页的公告栏~",
             icon: "success",
             confirmButtonText: "知道啦~",
         });
