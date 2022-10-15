@@ -18,9 +18,9 @@ function alertNotice(data, last_notice) {
         //alert("我们有新的公告！\n公告时间：" + data[last_notice].time + "\n公告内容：" + data[last_notice].content + "\n如需查看其他公告请展开首页的公告栏~");
         Swal.fire({
                       title: "新公告！",
-                      text: rs.data,
+                      text: "公告时间：" + data[last_notice].time + "\n公告内容：" + data[last_notice].content + "\n如需查看其他公告请展开首页的公告栏~",
                       icon: "success",
-                      confirmButtonText: "公告时间：" + data[last_notice].time + "\n公告内容：" + data[last_notice].content + "\n如需查看其他公告请展开首页的公告栏~",
+                      confirmButtonText: "知道啦~",
                     });
     }
 }
