@@ -14,7 +14,7 @@ function readCookie(name) {
 function alertNotice(data, last_notice) {
     var cookie_notice = readCookie("last_notice");
     let noticeMessage;
-    if (data[last_notice] === undefined || data[last_notice].brief === "") {
+    if (data[last_notice].brief === undefined || data[last_notice].brief === "") {
         noticeMessage = data[last_notice].content;
     } else {
         noticeMessage = data[last_notice].brief;
