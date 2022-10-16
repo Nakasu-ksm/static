@@ -55,7 +55,7 @@ function changeBoard() {
             var divObj = document.createElement("div");
             divObj.id = "notice_" + String(i);
             divObj.style = "background-color:rgba(255,255,255,0.6);text-align:left;height:auto";
-            divObj.innerHTML = "<p style='font-size:10px'>时间：" + notices[i].time + "</p><p>内容：" + notices[i].content + "</p>";
+            divObj.innerHTML = "<div style='margin:8px'><p style='font-size:12px'>时间：" + notices[i].time + "</p><p>内容：" + notices[i].content + "</p></div>";
             hlist.prepend(divObj);
         }
         list.append(hlist);
