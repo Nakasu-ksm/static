@@ -49,17 +49,19 @@ window.onload = function () {
 function changeBoard() {
     var notices = window.notices;
     var list = document.getElementById("notice_list");
+    var hlist = document.getElementById("hidden_list");
     if (window.loaded_notice == 0){
         for (var i in notices) {
             var divObj = document.createElement("div");
             divObj.id = "notice_" + String(i);
             divObj.style = "background-color:rgba(255,255,255,0.6);text-align:left;height:auto";
             divObj.innerHTML = "<p style='font-size:10px'>时间：" + notices[i].time + "</p><p>内容：" + notices[i].content + "</p>";
-            list.prepend(divObj);
+            hlist.prepend(divObj);
         }
+        list.append(hlist);
         window.loaded_notice = 1;
     }
-    list.style.height = list.style.height=="auto"?"0px":"auto";
+    list.style.height = list.style.height==String(hlist.offsetHeight)+"px"?"0px":String(hlist.offsetHeight)+"px";
     if (list.style.height == "0px") {
         document.getElementById("board_ontrol").innerHTML = "展开公告栏";
     } else {
