@@ -21,7 +21,9 @@ function alertNotice(data, last_notice) {
     }
 
     if (cookie_notice != last_notice) {
-        document.cookie = "last_notice=" + last_notice;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + 30 * 24 * 60 * 60 * 1000);
+        document.cookie = "last_notice=" + last_notice  + ";expires=" + exp.toGMTString();
         //alert("我们有新的公告！\n公告时间：" + data[last_notice].time + "\n公告内容：" + data[last_notice].content + "\n如需查看其他公告请展开首页的公告栏~");
         Swal.fire({
             title: "新公告！",
