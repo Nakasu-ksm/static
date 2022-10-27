@@ -260,7 +260,7 @@ var _hmt = _hmt || [];
           :xl="{span: 10, offset: 2}"
         >
           <h2>返回结果</h2>
-          <h5>点角色名可查看相关图片</h5>
+          <h5 style="color:darkgreen;">点角色名可查看相关图片</h5>
 
           <!-- 渲染全部识别结果 -->
             <div class="CartoonListScrollbar">
@@ -276,7 +276,7 @@ var _hmt = _hmt || [];
               <el-col :xs="15" :sm="15" :md="16" :lg="17" :xl="17">
                   <div style="top: -20px;
     position: relative;">
-                    <a :href="`https://www.bing.com/images/search?q=${result.name} ${result.cartoonname}`" target="_blank" style="color:black;"><p>{{result.name}}</p></a>
+                    <a :href="`https://www.bing.com/images/search?q=${result.name} ${result.cartoonname}`" target="_blank" style="color:black;text-decoration: none;"><p>{{result.name}}</p></a>
                 <p>来自动漫:{{result.cartoonname}}</p>
                   <p v-show="result.showTip" v-if="result.count>1" style="color:darkgreen" @click="showother(index)">
                       点击查看其他{{result.count}}个结果
@@ -305,6 +305,7 @@ var _hmt = _hmt || [];
       <!-- 仅在小屏上显示 -->
       <el-row class="content-center hidden-sm-and-up">
           <h2>识别结果(请滑动)</h2>
+        <h5 style="color:darkgreen;">点角色名可查看相关图片</h5>
         <el-col
           class="result-display hidden-md-and-up content-center"
           :span="20"
