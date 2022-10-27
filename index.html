@@ -275,7 +275,7 @@ var _hmt = _hmt || [];
               <el-col :xs="15" :sm="15" :md="16" :lg="17" :xl="17">
                   <div style="top: -20px;
     position: relative;">
-                      <p>{{result.name}}</p>
+                    <a :href="`https://www.bing.com/images/search?q=${result.name}`" target="_blank"><p>{{result.name}}</p></a>
                 <p>来自动漫:{{result.cartoonname}}</p>
                   <p v-show="result.showTip" v-if="result.count>1" style="color:darkgreen" @click="showother(index)">
                       点击查看其他{{result.count}}个结果
