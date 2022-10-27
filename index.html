@@ -269,7 +269,7 @@ var _hmt = _hmt || [];
               <!-- 根据返回结果调整显示框的 css -->
 
               <el-col :xs="9" :sm="9" :md="8" :lg="7" :xl="7">
-                <img class="result-image" :src="result.data" />
+                <img class="result-image_pc" :src="result.data" />
               </el-col>
 
 
@@ -499,6 +499,10 @@ var _hmt = _hmt || [];
       .result-image {
         width: 100%;
         height: 100%;
+      }
+      .result-image_pc {
+        width: 100px;
+        height: 100px;
       }
 
       .result-wrapper {
