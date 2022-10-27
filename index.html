@@ -284,7 +284,7 @@ var _hmt = _hmt || [];
                   <p v-show="result.showOtherResult" style=" color: #409eff; font-weight: bold">其他可能的人物</p>
 
                   <div v-show="result.showOtherResult" v-for="(otherresult,otherindex) in result.char">
-                      <p style="color: grey" v-if="otherindex!=0">角色:<a :href="`https://www.bing.com/images/search?q=${otherresult.name} ${otherresult.cartoonname}`" target="_blank" style="color:darkorange;"><span style="color: darkorange">{{otherresult.name}}</span></a> 来自动漫:<span style="color: mediumvioletred">{{otherresult.cartoonname}}</span></p>
+                      <p style="color: grey" v-if="otherindex!=0">角色:<a :href="`https://www.bing.com/images/search?q=${otherresult.name} ${otherresult.cartoonname}`" target="_blank" style="color:darkorange;text-decoration: none;"><span style="color: darkorange">{{otherresult.name}}</span></a> 来自动漫:<span style="color: mediumvioletred">{{otherresult.cartoonname}}</span></p>
 
                   </div>
 
@@ -321,7 +321,7 @@ var _hmt = _hmt || [];
               </el-col>
               <el-col :xs="15" :sm="15" :md="16" :lg="17" :xl="17">
                   <div style="top: -20px;position: relative;">
-                      <a :href="`https://www.bing.com/images/search?q=${result.name} ${result.cartoonname}`" target="_blank" style="color:black;"><p>{{result.name}}</p></a>
+                      <a :href="`https://www.bing.com/images/search?q=${result.name} ${result.cartoonname}`" target="_blank" style="color:black;text-decoration: none;"><p>{{result.name}}</p></a>
                 <p>来自动漫:{{result.cartoonname}}</p>
                       <p v-show="result.showTip" v-if="result.count>1" style="color:darkgreen" @click="showother(index)">
                       点击查看其他{{result.count}}个结果
@@ -329,7 +329,7 @@ var _hmt = _hmt || [];
                   <p v-show="result.showOtherResult" style=" color: #409eff; font-weight: bold">其他可能的人物</p>
 
                   <div v-show="result.showOtherResult" v-for="(otherresult,otherindex) in result.char">
-                      <p style="color: grey" v-if="otherindex!=0">角色:<a :href="`https://www.bing.com/images/search?q=${otherresult.name} ${otherresult.cartoonname}`" target="_blank" style="color:black;"><span style="color: darkorange">{{otherresult.name}}</span></a> 来自动漫:<span style="color: mediumvioletred">{{otherresult.cartoonname}}</span></p>
+                      <p style="color: grey" v-if="otherindex!=0">角色:<a :href="`https://www.bing.com/images/search?q=${otherresult.name} ${otherresult.cartoonname}`" target="_blank" style="color:darkorange;text-decoration: none;"><span style="color: darkorange">{{otherresult.name}}</span></a> 来自动漫:<span style="color: mediumvioletred">{{otherresult.cartoonname}}</span></p>
                   </div>
 
 <a style="color:blue;" @click="HelpFeature(index),form.box_id = result.box_id,addForm = true,changeVerify()">识别错误？请您来补充信息！--请点我</a>
