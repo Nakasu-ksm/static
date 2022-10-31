@@ -239,7 +239,7 @@ var _hmt = _hmt || [];
           <h2>动漫识别</h2>
           <el-upload
             class="image-uploader content-center"
-            :action="`https://aiapiv2.animedb.cn/detect?force_one=1&content_type=${model}`"
+            :action="`https://aiapiv2.animedb.cn/detect?force_one=1&model=${model}`"
             v-loading="loading"
             drag="true"
             :disabled="IsLock"
