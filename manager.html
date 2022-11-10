@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+      html{
+          height: 100%;
+          width: 100%;
+      }
+      .layer{
+          background: url("https://www.dmoe.cc/random.php ");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+
+
+      }
+      .box-card{
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 50%;
+          height: 50%;
+      }
+      @media (max-width: 768px){
+          .box-card{
+              width: 80%;
+
+          }
+      }
+  </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 导入Vue -->
+  <script src="https://unpkg.zhimg.com/vue@2.6.14/dist/vue.min.js"></script>
+  <!-- 引入样式 -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.zhimg.com/element-ui@2.15.5/lib/theme-chalk/index.css"
+  />
+  <!-- 导入基于断点的自动布局CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.zhimg.com/element-ui@2.15.5/lib/theme-chalk/display.css"
+  />
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.zhimg.com/element-ui/lib/index.js"></script>
+  <meta name="baidu-site-verification" content="code-cU5qGLNRwy" />
+
+  <title>AnimeTrace后台管理</title>
+</head>
+
+<body class="layer">
+<div id="root" >
+  <el-card class="box-card">
+    <div slot="header" class="clearfix">
+      <span>AnimeTrace管理面板</span>
+      <el-button style="float: right; padding: 3px 0" type="text" @click="open">登录帮助</el-button>
+    </div>
+    <el-form label-width="80px" >
+      <el-form-item label="用户名">
+        <el-input v-model="form.username" width="200px"></el-input>
+      </el-form-item>
+      <el-form-item label="密码">
+        <el-input v-model="form.password" width="200px"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="login()">提交</el-button>
+
+      </el-form-item>
+
+
+    </el-form>
+  </el-card>
+
+</div>
+<script defer>
+  let vm = new Vue({
+    el: "#root",
+    //filter 过滤order
+    data: function () {
+      return {
+        form: {
+          username: '',
+          password: '',
+        },
+      };
+    },
+    methods: {
+      open(){
+        this.$alert('请输入用户名和密码登录', '登录提示', {
+          confirmButtonText: '知道啦~',
+        });
+      },
+      login(){
+        if(vm.form.username.trim()==="" || vm.form.username.trim()===""){
+          return vm.$message.warning("请输入用户名或密码")
+        }
+        if(vm.form.username!=="KFCCrazyThursday"){
+          return vm.$message.error("用户未找到")
+        }
+        if(vm.form.password!=="Vme50"){
+          return vm.$message.error("密码错误")
+        }
+        vm.$message.success("登录成功")
+        setTimeout(function(){
+          window.location.href = "https://order.kfc.com.cn/preorder-taro/home"
+        },1500)
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
