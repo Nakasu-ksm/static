@@ -146,6 +146,7 @@
       <div class="bg-main content-center">
         <b style="font-size: 22px;">AnimeTrace动漫游戏人物基因库</b>
         <p class="annotation">
+          <span id="tellYou">
           使用视觉神经网络搭建
           <br>
           机器识别有误判可能性
@@ -164,6 +165,7 @@
           <br>
           <span style='color: red; font-weight: bold;font-size:20px;'>欢迎加入本站QQ群：<a href='https://jq.qq.com/?_wv=1027&amp;k=G9DJBTKA' style='color: #409EFF;'>659950593</a></span>
           <br>
+          </span>
           <el-dropdown @command="handleModel">
             <el-button type="primary">
               {{modelName}}<i class="el-icon-arrow-down el-icon--right"></i>
@@ -563,6 +565,9 @@
         * {
             color: black;
         }
+        #tellYou {
+            color: black;
+        }
         #board_control {
             background-color: rgba(255,255,255,0.6);
         }
@@ -592,6 +597,9 @@
     }
     @media (prefers-color-scheme:dark){
         * {
+            color: white;
+        }
+        #tellYou {
             color: white;
         }
         #board_control {
