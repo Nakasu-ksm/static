@@ -64,8 +64,8 @@ function changeBoard() {
     }
     list.style.height = list.style.height==String(hlist.offsetHeight)+"px"?"0px":String(hlist.offsetHeight)+"px";
     if (list.style.height == "0px") {
-        document.getElementById("board_ontrol").innerHTML = "展开公告栏";
+        document.getElementById("board_control").innerHTML = "展开公告栏";
     } else {
-        document.getElementById("board_ontrol").innerHTML = "收起公告栏";
+        document.getElementById("board_control").innerHTML = "收起公告栏";
     }
 }
