@@ -1,3 +1,7 @@
+@import './google-font.css';
+.body{
+    font-family:'Poppins', sans-serif;
+}
 .ui-tooltips-guide .ui-tooltips-cnt{
     background-color: rgba(255, 255, 255, 0.95);
 }
