@@ -54,8 +54,9 @@ function changeBoard() {
         for (var i in notices) {
             var divObj = document.createElement("div");
             divObj.id = "notice_" + String(i);
-            divObj.style = "background-color:rgba(255,255,255,0.6);text-align:left;height:auto";
-            divObj.innerHTML = "<div style='background-color:rgba(255,255,255,0.8);width:100%;height:16px;line-height:16px'><span style='font-size:12px;margin:8px'>时间：" + notices[i].time + "</span></div><p style='margin:8px'>" + notices[i].content + "</p>";
+            divObj.className = "noticeObjA";
+            divObj.style = "text-align:left;height:auto";
+            divObj.innerHTML = "<div class='noticeObjB' style='width:100%;height:16px;line-height:16px'><span style='font-size:12px;margin:8px'>时间：" + notices[i].time + "</span></div><p style='margin:8px'>" + notices[i].content + "</p>";
             hlist.prepend(divObj);
         }
         list.append(hlist);
