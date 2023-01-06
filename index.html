@@ -116,7 +116,7 @@
 <div id="root" >
   <div v-show="showlayer" class="black" style="background:#000;height: 100%;width: 100%;z-index: 1;position: fixed;opacity: 0.3;left: 0;top: 0;">
   </div>
-   <div id="checkbox">
+   <div class="checkbox">
       <el-card v-show="showlayer" class="box-card" style="z-index: 2;position:fixed;overflow-y: auto;">
         <div slot="header" class="clearfix">
           <span>请加群获得识别码哦<span style="color: red;">（免费）</span></span>
@@ -562,6 +562,18 @@
 
     .result-wrapper {
         text-align: left;
+    }
+    .v[data-class=v] .vcards .vcard .vcontent.expand::before {
+        z-index: 2; !important
+    }
+    .v[data-class=v] .vcards .vcard .vcontent.expand::after {
+        z-index: 2; !important
+    }
+    .checkbox {
+        z-index: 3; !important
+    }
+    .swal2-modal {
+        z-index: 4; !important
     }
     @media (prefers-color-scheme:light){
         /* * {
