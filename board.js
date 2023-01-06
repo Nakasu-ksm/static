@@ -50,7 +50,7 @@ window.onload = function () {
     img.src = "https://www.dmoe.cc/random.php";
     if (img.width == 0) {
         var fixBg = document.createElement("style");
-        fixBg.innerText = ".background{background:url(https://www.animedb.cn/api/background) fixed;background-size:cover;background-repeat:no-repeat;}";
+        fixBg.innerText = ".background:before {background:url(https://www.animedb.cn/api/background) fixed;background-size:cover;background-position:center 0;background-repeat: no-repeat;}";
         document.body.appendChild(fixBg);
     }
 }
