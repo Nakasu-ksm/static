@@ -116,27 +116,29 @@
 <div id="root" >
   <div v-show="showlayer" class="black" style="background:#000;height: 100%;width: 100%;z-index: 1;position: fixed;opacity: 0.3;left: 0;top: 0;">
   </div>
-  <el-card v-show="showlayer" class="box-card" style="z-index: 2;position:fixed;overflow-y: auto;">
-    <div slot="header" class="clearfix">
-      <span>请加群获得识别码哦<span style="color: red;">（免费）</span></span>
-    </div>
-    <span style="padding: 5px;">感谢您的支持，因为一些特殊情况，我们不得不开启识别码验证，请放心本站将永远免费且无广告。请加入Q群后，<span style="color: red;">查看群公告里面的识别码</span>，非常感谢。<br><span style="color: red;">如果引擎无法帮助您找到正确的番剧或者galgame可以在群中询问哦~</span></span>
-    <br><span style="font-size: 20px;text-align: center">欢迎加入本站QQ群：<a href='https://jq.qq.com/?_wv=1027&amp;k=G9DJBTKA'>659950593</a></span>
-    <br><center><img src="anime.png" width="120px" height="120px" style="text-align: center;"></center>
-    <el-form label-width="80px" >
-      <el-form-item label="识别码">
-        <el-input v-model="form.seriescode" width="200px"></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="login()">提交</el-button>
+   <div id="checkbox">
+      <el-card v-show="showlayer" class="box-card" style="z-index: 2;position:fixed;overflow-y: auto;">
+        <div slot="header" class="clearfix">
+          <span>请加群获得识别码哦<span style="color: red;">（免费）</span></span>
+        </div>
+        <span style="padding: 5px;">感谢您的支持，因为一些特殊情况，我们不得不开启识别码验证，请放心本站将永远免费且无广告。请加入Q群后，<span style="color: red;">查看群公告里面的识别码</span>，非常感谢。<br><span style="color: red;">如果引擎无法帮助您找到正确的番剧或者galgame可以在群中询问哦~</span></span>
+        <br><span style="font-size: 20px;text-align: center">欢迎加入本站QQ群：<a href='https://jq.qq.com/?_wv=1027&amp;k=G9DJBTKA'>659950593</a></span>
+        <br><center><img src="anime.png" width="120px" height="120px" style="text-align: center;"></center>
+        <el-form label-width="80px" >
+          <el-form-item label="识别码">
+            <el-input v-model="form.seriescode" width="200px"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="login()">提交</el-button>
 
-      </el-form-item>
-      <span>题外话：我们创建这个群聊的目的是为了给大家一个交流聊天的地方，并不是单纯想把它建成一个产品群。希望您能在群内多多聊天哦~~~</span>
+          </el-form-item>
+          <span>题外话：我们创建这个群聊的目的是为了给大家一个交流聊天的地方，并不是单纯想把它建成一个产品群。希望您能在群内多多聊天哦~~~</span>
 
 
 
-    </el-form>
-  </el-card>
+        </el-form>
+    </el-card>
+  </div>
   <!-- 标题栏 -->
   <el-row class="title-block">
     <el-col :xs="0" :sm="1" :md="2" :lg="3" :xl="3">
@@ -602,7 +604,9 @@
         #tellYou {
             color: white;
         }
-
+        .box-card {
+            background-color: #1A1A1A;
+        }
         #board_control {
             background-color: rgba(0,0,0,0.6); !important
         }
