@@ -45,6 +45,14 @@ window.onload = function () {
         }
     }
     window.loaded_notice = 0;
+    //Fix Background
+    var img = new Image();
+    img.src = "https://www.dmoe.cc/random.php";
+    if (img.width == 0) {
+        var fixBg = document.createElement("style");
+        fixBg.innerText = ".background{background:url(https://www.animedb.cn/api/background) fixed;background-size:cover;background-position:center 0;background-repeat:no-repeat;}";
+        document.body.appendChild(fixBg);
+    }
 }
 function changeBoard() {
     var notices = window.notices;
