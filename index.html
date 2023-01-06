@@ -82,10 +82,26 @@
     .background {
         height: 100%;
 
-        /*       background: url("https://pic.rmb.bdstatic.com/bjh/38ea34b5bc22ff700686bf2871b3ba9a.png") fixed; */
+        /*       background: url("https://pic.rmb.bdstatic.com/bjh/38ea34b5bc22ff700686bf2871b3ba9a.png") fixed;
         background: url("https://www.dmoe.cc/random.php") fixed;
         background-size: cover;
+        background-repeat: no-repeat; */
+    }
+    .background:before {
+        background:url(https://www.dmoe.cc/random.php) fixed;
+        background-size:cover;
+        background-position:center 0;
         background-repeat: no-repeat;
+        width:100%;
+        height:100%;
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:-1;
+        margin:0;
+        padding:0;
+        position:fixed;
     }
 
     .el-table .high {
