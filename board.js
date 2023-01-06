@@ -26,7 +26,7 @@ function alertNotice(data, last_notice) {
         document.cookie = "last_notice=" + last_notice  + ";expires=" + exp.toGMTString();
         Swal.fire({
             title: "新公告！",
-            html: "<span style=\"color: red; font-weight: bold;\">本站QQ群(点击群号即可加入)：<a href=\"https://jq.qq.com/?_wv=1027&amp;k=G9DJBTKA\" style=\"color:\rgb(64, 158, 255);">659950593</a>  欢迎加入！！！</span><br>"+"公告时间：" + data[last_notice].time + "<br>公告内容：<span style='color: dodgerblue;font-weight: bold;'>" + noticeMessage + "</span><br>如需查看其他公告请展开首页的公告栏~",
+            html: "<span style=\"color: red; font-weight: bold;\">本站QQ群(点击群号即可加入)：<a href=\"https://jq.qq.com/?_wv=1027&amp;k=G9DJBTKA\" style=\"color:rgb(64, 158, 255);\">659950593</a>  欢迎加入！！！</span><br>"+"公告时间：" + data[last_notice].time + "<br>公告内容：<span style='color: dodgerblue;font-weight: bold;'>" + noticeMessage + "</span><br>如需查看其他公告请展开首页的公告栏~",
             icon: "success",
             confirmButtonText: "知道啦~",
         });
