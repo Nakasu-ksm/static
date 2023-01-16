@@ -132,7 +132,8 @@
 </style>
 <div class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <h1><a href="/" class="navbar-brand">AnimeTrace动漫游戏人物基因库</a></h1>
+        <h1 class="title_small"><a href="/" class="navbar-brand">AnimeTrace</a></h1>
+        <h1 class="title_normal"><a href="/" class="navbar-brand">AnimeTrace动漫游戏人物基因库</a></h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -722,6 +723,20 @@
             background-color: #1A1A1A;
             border: white;
             color: white;
+        }
+    }
+    .title_normal {
+        display: block;
+    }
+    .title_small {
+        display: none;
+    }
+    @media screen and (max-width:410px){
+        .title_normal {
+            display: none;
+        }
+        .title_small {
+            display: block;
         }
     }
 </style>
