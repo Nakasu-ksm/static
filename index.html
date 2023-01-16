@@ -132,8 +132,11 @@
 </style>
 <div class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <h1 class="title_small"><a href="/" class="navbar-brand">AnimeTrace</a></h1>
-        <h1 class="title_normal"><a href="/" class="navbar-brand">AnimeTrace动漫游戏人物基因库</a></h1>
+        <h1 class="title_small"><a href="/" class="navbar-brand" style="margin-bottom:.3rem;vertical-align:middle;">AnimeTrace</a></h1>
+        <h1 class="title_normal"><a href="/" class="navbar-brand" style="margin-bottom:.3rem;vertical-align:middle;">AnimeTrace动漫游戏人物基因库</a></h1>
+        <span class="nav-item" style="margin-top:0;margin-bottom:0;cursor:pointer;background-color:rgba(255,255,255,.7);border:1px solid #FFFFFF;">
+            <a class="nav-link " aria-current="page" onclick="nav_commit()" id="nav_commit">去讨论</a>
+        </span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -144,9 +147,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link " aria-current="page" onclick="nav_notice()" id="nav_notice">公告</a>
-              </li>
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" onclick="nav_commit()" id="nav_commit">讨论</a>
                 </li>
             </ul>
         </div>
@@ -731,7 +731,7 @@
     .title_small {
         display: none;
     }
-    @media screen and (max-width:410px){
+    @media screen and (max-width:485px){
         .title_normal {
             display: none;
         }
