@@ -130,7 +130,7 @@
         }
     }
 </style>
-<div class="navbar navbar-expand-lg navbar-dark bg-primary" style="top:0;position:fixed;width:100%;z-index:100;">
+<div class="navbar navbar-expand-lg navbar-dark bg-primary" style="top:0;position:fixed;width:100%;z-index:2;">
     <div class="container-fluid">
         <h1><a href="/" class="navbar-brand">AnimeTrace动漫游戏人物基因库</a></h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -164,7 +164,7 @@
   <div v-show="showlayer" class="black" style="background:#000;height: 100%;width: 100%;z-index: 1;position: fixed;opacity: 0.3;left: 0;top: 0;">
   </div>
    <div class="checkbox">
-      <el-card v-show="showlayer" class="box-card" style="z-index: 3;position:fixed;overflow-y: auto;">
+      <el-card v-show="showlayer" class="box-card" style="z-index: 4;position:fixed;overflow-y: auto;">
         <div slot="header" class="clearfix">
           <span>请加群获得识别码哦<span style="color: red;">（免费）</span></span>
         </div>
@@ -488,7 +488,7 @@
     changeBoard();
   }
 </script>
-<footer style="position: relative;width: 100%;bottom: 0;text-align: center;z-index:100">
+<footer style="position: relative;width: 100%;bottom: 0;text-align: center;z-index:3">
   <div style="text-align: center; bottom: 0;padding-bottom: 20px;position: relative;" class="copyright"><p style="color: #6a6868;">@2022 AnimeTrace|<a href="https://beian.miit.gov.cn/" style="text-decoration: none;color: #6a6868;">鲁ICP备2022004415号-1</a></p></div>
 </footer>
 <script>
@@ -640,13 +640,13 @@
         text-align: left;
     }
     .v[data-class=v] .vcards .vcard .vcontent.expand::before {
-        z-index: 2; !important
+        z-index: 3; !important
     }
     .v[data-class=v] .vcards .vcard .vcontent.expand::after {
-        z-index: 2; !important
+        z-index: 3; !important
     }
     .swal2-modal {
-        z-index: 4; !important
+        z-index: 5; !important
     }
     @media (prefers-color-scheme:light){
         /* * {
