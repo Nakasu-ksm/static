@@ -226,7 +226,7 @@
 
             </el-dropdown-menu>
           </el-dropdown>
-          <p @click="helpVisible = true"><span style="font-weight: bold;color: red;" >本站识别技巧</span>&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;color: #20c997;">其他可尝试工具</span></p>
+        <div style='cursor:pointer;'><p @click="helpVisible = true"><span style="font-weight: bold;color: red;" >本站识别技巧</span>&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;color: #20c997;">其他可尝试工具</span></p>
         <el-dialog
                 title="提升识别准确度的帮助"
                 :visible.sync="helpVisible"
@@ -234,7 +234,7 @@
                 height="100%"
         >
           <iframe src="help.html" frameborder="0" width="100%" height="600px"></iframe>
-        </el-dialog>
+        </el-dialog></div>
         <!--<el-button type="text" @click="dialogTableVisible = true">点击查看支持人物</el-button>-->
         <el-dialog @open="GetData()" title="支持列表" :visible.sync="dialogTableVisible">
           <el-alert
