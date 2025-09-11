@@ -1,9 +1,9 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",           // 匹配所有路径
-      "destination": "https://ai.animedb.cn/", // 跳转目标
-      "permanent": true            // 301 永久重定向
+      "source": "/(.*)",          
+      "destination": "https://ai.animedb.cn/",
+      "permanent": true          
     }
   ]
 }
